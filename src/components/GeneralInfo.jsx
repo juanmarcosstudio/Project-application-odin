@@ -1,7 +1,7 @@
 import { useState } from 'react';
 //import './styles/GeneralInfo.css';
 
-const GeneralInfo = () => {
+function GeneralInfo () {
     const [editing, setEditing] = useState(false);
     const [formData, setFormData] = useState({
       name: '',
