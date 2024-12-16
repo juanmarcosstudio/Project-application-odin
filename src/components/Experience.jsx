@@ -1,7 +1,7 @@
 import { useState } from 'react';
 //import './styles/Experience.css';
 
-const Experience = () => {
+function Experience () {
   const [editing, setEditing] = useState(false);
   const [formData, setFormData] = useState({
     company: '',
@@ -11,12 +11,12 @@ const Experience = () => {
     toDate: '',
   });
 
-  const handleChange = (e) => {
+  function handleChange(e) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  function handleSubmit () {
     setEditing(false);
     alert(`Company: ${formData.company}, Position: ${formData.position}, Responsibilities: ${formData.responsibilities}, From: ${formData.fromDate}, To: ${formData.toDate}`);
   };
