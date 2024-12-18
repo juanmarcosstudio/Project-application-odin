@@ -1,7 +1,7 @@
 import { useState } from 'react';
 //import './styles/Education.css';
 
-const Education = () => {
+function Education () {
   const [editing, setEditing] = useState(false);
   const [formData, setFormData] = useState({
     school: '',
@@ -9,12 +9,12 @@ const Education = () => {
     dateOfStudy: '',
   });
 
-  const handleChange = (e) => {
+  function handleChange(e) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  function handleSubmit() {
     setEditing(false);
     alert(`School: ${formData.school}, Title of Study: ${formData.titleOfStudy}, Date: ${formData.dateOfStudy}`);
   };
